@@ -84,6 +84,7 @@
     }
 
     &__slider-title {
+        @extend %title-font;
         color: $title;
         font-size: 110px;
         line-height: 135px;
@@ -347,6 +348,7 @@
     padding: 45px 0 105px;
 
     &__title {
+        @extend %title-font;
         color: $title;
         font-size: 35px;
         line-height: 51px;
@@ -410,6 +412,7 @@
     }
 
     &__info-title {
+        @extend %title-font;
         font-size: 20px;
         line-height: 25px;
         color: $title;
@@ -446,6 +449,7 @@
     background-repeat: no-repeat;
 
     &__title {
+        @extend %title-font;
         max-width: 740px;
         color: $title;
         font-size: 60px;
@@ -467,5 +471,91 @@
 
     &__text {
         max-width: 540px;
+    }
+}
+
+// Works-path
+.works-path {
+    padding: 80px 0 30px;
+
+    &__title {
+        @extend %title-font;
+        text-align: center;
+        color: $title;
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 51px;
+    }
+
+    &__items-box {
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 2px solid rgba($title, .7);
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $title;
+        }
+    }
+
+    &__item {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+
+    &__item--production {
+        margin-left: 317px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background: rgba($title, .7);
+        }
+    }
+
+    &__item--production,
+    &__item--consultation {
+        padding-bottom: 38px;
+
+    }
+
+    &__item--measuring {
+        padding-top: 38px;
+        margin-left: 305px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 2px;
+            background: rgba($title, .7);
+        }
+    }
+
+    &__item-title {
+        margin-left: 13px;
+        color: $title;
+        @extend %title-font;
+    }
+
+    &__item-text {
+        margin-top: 13px;
     }
 }
