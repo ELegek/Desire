@@ -47,6 +47,7 @@ button,
 textarea,
 select {
   font: inherit;
+  outline: none;
 }
 
 a {
@@ -56,5 +57,4 @@ a {
 
 button {
   cursor: pointer;
-  outline: none;
 }
