@@ -22,6 +22,10 @@
         padding: 0;
         cursor: pointer;
     }
+
+    &__btn-menu {
+        display: none;
+    }
 }
 
 .logo {
@@ -1424,3 +1428,5 @@
         padding: 6px 60px;
     }
 }
+
+@import 'media';
